@@ -1,0 +1,49 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <form [formGroup]="signupForm" (ngSubmit)="signup()">
+            <clr-input-container>
+              <label class="clr-required-mark">Enter Name</label>
+              <input clrInput type="text" formControlName="fullName" name="fullName" />
+            </clr-input-container>
+            <clr-input-container>
+              <label class="clr-required-mark">Email</label>
+              <input clrInput type="text" formControlName="email" name="email" />
+            </clr-input-container>
+            <clr-input-container>
+                <label class="clr-required-mark">password</label>
+                <input clrInput type="password" formControlName="password" name="password" />
+              </clr-input-container>
+              <clr-input-container>
+                <label class="clr-required-mark">date</label>
+                <input clrInput type="date" formControlName="date" name="date" />
+              </clr-input-container>
+              
+               
+                
+                
+              <div>
+            <clr-dropdown>
+                
+            
+
+
+            <select name="type" id="type" formControlName="type">
+                <option value="admin">Admin</option>
+                <option value="user">User</option>
+               
+            </select>
+        </clr-dropdown>
+    </div>
+    <br>
+              
+               <div>
+                <button  type="submit">Submit</button>
+            </div>
+           
+              
+          </form>
+    </body>
+</html>

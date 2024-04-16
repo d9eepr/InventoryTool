@@ -1,0 +1,39 @@
+<html>
+
+<form #form = "ngForm" (ngSubmit)="onSubmit()" >
+    <div class="form-group">
+    <div class="form-check">
+    <input type="number" name="pid" id="pid" [(ngModel)]="pid" placeholder="Enter ID" ngModel>
+    <button type="submit">Submit</button>
+</div>
+</div>
+</form>
+<br>
+
+
+<table  style="width:100%" class="table table-striper">
+    <tr>
+      
+      <th>PRODUCT ID</th>
+      <th>MODEL DETAILS</th>
+      <th>CONFIGURATION DETAILS</th>
+      
+      <th>OWNER</th>
+   
+  
+    </tr>
+    
+    
+    <tr>
+     
+        <td>{{inventories.pid}}</td> 
+        <td>{{inventories.model}}</td>
+        <td>{{inventories.config}}</td>
+        <td>{{inventories.owner}}</td>
+     
+       
+    </tr>
+
+    
+  </table>
+</html>

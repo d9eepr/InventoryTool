@@ -1,0 +1,54 @@
+<html>
+  
+  <head>
+  
+
+  </head>
+  <body>
+   
+    <div class="container">
+      <div align="left"> 
+        <h2 >Inventory List</h2>
+      </div>
+      <form class="wrap">
+        <div class="search">
+        
+          <input class="searchTerm" type="text" name="searchTerm" 
+            placeholder="Enter keyword"
+            [(ngModel)]="searchTerm" />
+          
+        </div>
+      </form>
+   
+    <table  style="width:100%" class="table table-striper " >
+        <tr class="font-weight-bold" >
+          
+          <th>PRODUCT ID</th>
+          <th>MODEL DETAILS</th>
+          <th>CONFIGURATION DETAILS</th>
+          
+          <th>OWNER</th>
+          <th>ACTIONS</th>
+      
+        </tr>
+        
+        
+        <tr *ngFor="let inventory of inventories | searchFilter: searchTerm ">
+            
+            <td>{{inventory.pid}}</td> 
+            <td>{{inventory.model}}</td>
+            <td>{{inventory.config}}</td>
+            <td>{{inventory.owner}}</td>
+            <td><button (click) = "updateInventory(inventory.pid )" class="btn btn-info">Update</button><button (click) = "delete(inventory.pid )" class="btn btn-danger">DELETE</button></td>
+            
+    
+           
+        </tr>
+    
+        
+      </table>
+    </div>
+    
+  </body>
+
+</html>
