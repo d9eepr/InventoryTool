@@ -24,3 +24,33 @@ created Controller
 	taking object of sevice class to fetch the method of it
 	
 able to display json data to the server
+
+###############################################################################################################
+
+Login 
+
+
+
+	list of users 
+		fullname     varchar(200)
+		empid         varchar2(8)
+		email 			varchar2(20)
+		password		varchar2(20)
+		date of joining	date
+		type			varchar(10)
+		
+		
+		
+Create table user (
+	empid varchar(20) PRIMARY KEY ,
+	fullname varchar(200),
+	email varchar(200),
+	upassword varchar(20),
+	dateOfJoining date,
+	utype varchar(10)
+);
+	
+
+
+Insert into user 
+values ("1382408","Deepraj Evane", "deepraj.evane@dell.com", "deep", '2023-06-19', 'admin');
