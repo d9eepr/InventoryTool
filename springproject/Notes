@@ -1,0 +1,26 @@
+Back End
+
+created table database with data;
+
+
+created model Inventory
+
+created  Repository
+	created two method in interface one for  display all
+	next for search specific id to fetch detail
+	using entitymanager write sQL native query to fetch data from the database
+	
+	
+created service
+
+	to use the repository methods and implement it
+	
+	
+created DTO 
+	to provide the JSON data to the request page
+	
+created Controller
+	to provide the get and request mapping 
+	taking object of sevice class to fetch the method of it
+	
+able to display json data to the server
